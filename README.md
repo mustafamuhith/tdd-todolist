@@ -56,4 +56,5 @@ undefined
 
 #### Further work
 
-- Add a user interface to this app so you can run this from the command line (don't worry about test-driving this once your unit tests for your app logic are passing)
+- Instead of the TodoList creating plain old JavaScript objects (POJO), have it create instances of a `TodoItem` class
+- Create a user interface for this application (this could be a simple command line interface, or you could create a graphical user interface)
