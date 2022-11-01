@@ -19,9 +19,9 @@ $ npm ci # to install dependencies
 
 ### Instructions
 1. Implement the below requirements by following a test-driven development process. 
-2. The `src/TodoList.js` files contains an empty class definition you can use as a starting point.
-3. An initial spec file is provided in `spec/TodoList.spec.js`. You should add your tests to this file.
-5. For each requirement below, write a single test and pass it by writing source code. Repeat until you have implemented all requirements.
+2. The `src/todolist.js` file is where you should write your source code.
+3. An initial spec file is provided in `spec/todolist.spec.js`. You should add your tests to this file.
+5. For each requirement below, write a single test and pass it by writing source code. Repeat until you have implemented all requirements, following the Red Green Refactor approach.
  
 ### Requirements
 
@@ -39,7 +39,7 @@ You should be able to run this in your JS console (using your node REPL, or brow
 #### Example interactions
 ```sh
 $ node
-> const TodoList = require('./src/TodoList.js') // load your program into your REPL
+> const TodoList = require('./src/todolist.js')
 undefined
 > const todoList = new TodoList()
 > todoList.create("Do the laundry")
