@@ -42,15 +42,20 @@ You should be able to run this in your JS console (using your node REPL, or brow
 $ node
 > const TodoList = require('./src/todolist.js')
 undefined
+
 > const todoList = new TodoList()
 > todoList.create("Do the laundry")
 {id: 1, text: "Do the laundry", status: "incomplete"}
+
 > todoList.create("Make the bed")
 {id: 2, text: "Make the bed", status: "incomplete"}
+
 > todoList.setComplete(2)
 {id: 2, text: "Make the bed", status: "complete"}
+
 > todoList.setComplete(3)
 "Todo item not found"
+
 > todoList.getAll()
 [{id: 1, text: "do laundry", status: "incomplete"}, {id: 2, text: "make the bed", status: "complete"}]
 ```
@@ -60,14 +65,19 @@ undefined
 $ node
 > const { create, setComplete, getAll } = require('./src/todolist.js')
 undefined
+
 > create("Do the laundry")
 {id: 1, text: "Do the laundry", status: "incomplete"}
+
 > create("Make the bed")
 {id: 2, text: "Make the bed", status: "incomplete"}
+
 > setComplete(2)
 {id: 2, text: "Make the bed", status: "complete"}
+
 > setComplete(3)
 "Todo item not found"
+
 > getAll()
 [{id: 1, text: "do laundry", status: "incomplete"}, {id: 2, text: "make the bed", status: "complete"}]
 ```
