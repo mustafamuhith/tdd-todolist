@@ -18,9 +18,10 @@ $ npm ci # to install dependencies
 ```
 
 ### Instructions
-1. Implement the below requirements by following a test-driven development process. 
-2. The `src/todolist.js` file is where you should write your source code.
-3. An initial spec file is provided in `spec/todolist.spec.js`. You should add your tests to this file.
+1. Create a domain model based on the requirements outlined below. Add your domain model to the repository, either in the domain-model.md file or as a screenshot or URL
+2. Implement the below requirements by following a test-driven development process. 
+3. The `src/todolist.js` file is where you should write your source code.
+4. An initial spec file is provided in `spec/todolist.spec.js`. You should add your tests to this file.
 5. For each requirement below, write a single test and pass it by writing source code. Repeat until you have implemented all requirements, following the Red Green Refactor approach.
  
 ### Requirements
@@ -36,7 +37,7 @@ You should be able to run this in your JS console (using your node REPL, or brow
 - Remove a todo item by its ID
 
 
-#### Example interactions
+#### Example interactions (class version)
 ```sh
 $ node
 > const TodoList = require('./src/todolist.js')
@@ -51,6 +52,23 @@ undefined
 > todoList.setComplete(3)
 "Todo item not found"
 > todoList.getAll()
+[{id: 1, text: "do laundry", status: "incomplete"}, {id: 2, text: "make the bed", status: "complete"}]
+```
+
+#### Example interactions (function version)
+```sh
+$ node
+> const { create, setComplete, getAll } = require('./src/todolist.js')
+undefined
+> create("Do the laundry")
+{id: 1, text: "Do the laundry", status: "incomplete"}
+> create("Make the bed")
+{id: 2, text: "Make the bed", status: "incomplete"}
+> setComplete(2)
+{id: 2, text: "Make the bed", status: "complete"}
+> setComplete(3)
+"Todo item not found"
+> getAll()
 [{id: 1, text: "do laundry", status: "incomplete"}, {id: 2, text: "make the bed", status: "complete"}]
 ```
 
